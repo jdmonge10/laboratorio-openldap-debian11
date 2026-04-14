@@ -1,2 +1,4 @@
-# laboratorio-openldap-debian11
-"Guía paso a paso y archivos de configuración para la instalación de OpenLDAP en Debian 11. Incluye comandos de instalación, configuración del asistente slapd y pruebas de funcionamiento."
+🚀 Despliegue de OpenLDAP y Configuración de Directorio
+
+Este manual documenta el proceso técnico integral para crear un entorno de servidor de directorio profesional, utilizando OpenLDAP sobre un sistema Debian 11 (Bullseye).
+
