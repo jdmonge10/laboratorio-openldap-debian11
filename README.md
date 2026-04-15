@@ -119,8 +119,8 @@ El asistente aplica los cambios y muestra el resumen final de la configuración 
 Para concluir, se realiza una consulta de búsqueda inicial para verificar que la jerarquía LDAP se ha creado correctamente.
 
 ### Paso 5.1: Consulta Local (ldapsearch)
-Ejecutamos una búsqueda en el directorio para listar los objetos base creados por el asistente.
-> **Comando:** `ldapsearch -x -b "dc=nombre_empresa,dc=local"`
+Ejecutamos una consulta a la raíz del servidor para confirmar que identifica correctamente los dominios que gestiona. 
+> **Comando:** `ldapsearch -H ldap:// -x -s base -b "" -LLL "namingContexts"
 
 **Captura 01:**
 ![Prueba de funcionamiento](05-prueba-de-funcionamiento/01-verificacion-final.png)
