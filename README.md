@@ -110,4 +110,4 @@ Se confirma el movimiento de los archivos de la base de datos antigua para evita
 El asistente aplica los cambios y muestra el resumen final de la configuración del servidor LDAP.
 
 **Captura 09:**
-![Resumen final](04-configuracion-del-servidor/-resumen-final-asistente.png).
+![Resumen final](04-configuracion-del-servidor/10-resumen-final-asistente.png).
