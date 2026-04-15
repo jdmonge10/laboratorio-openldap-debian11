@@ -4,8 +4,12 @@ Este manual documenta el proceso técnico integral para crear un entorno de serv
 
 ---
 
-📁 Fase 01: Actualización y Preparación
-En esta etapa inicial se prepara el entorno del sistema operativo para evitar conflictos de dependencias y asegurar que disponemos de las últimas versiones de seguridad.
+## 📂 Fase 01: Actualización y Preparación del Entorno
+El éxito de la instalación de OpenLDAP depende de un sistema base sólido y actualizado. En esta fase preparamos Debian 11 para los servicios de identidad.
 
-Paso 1.1: Actualización de Repositorios
-Se ejecuta el comando de actualización para sincronizar los índices de paquetes locales con las fuentes remotas de Debian.
+### Paso 1.1: Actualización de Repositorios
+Iniciamos sincronizando los índices de paquetes para asegurar que descargamos las versiones más recientes.
+> **Comando:** `sudo apt update`
+
+**Captura 01:**
+![Actualización de repositorios](01-actualizacion-y-preparacion/01-update.png)
