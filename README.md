@@ -58,3 +58,56 @@ Utilizamos el sistema de control de servicios para verificar que OpenLDAP está 
 ![Estado activo del servicio](03-verificacion-del-servicio/01-status-activo.png)
 
 ---
+
+## 📂 Fase 04: Configuración del Servidor
+En esta etapa personalizamos la instancia de OpenLDAP para definir la estructura del directorio (DN base) y la identidad de la organización.
+
+### Paso 4.1: Ejecución del Asistente de Reconfiguración
+Utilizamos la herramienta de gestión de paquetes para lanzar el asistente interactivo de `slapd`.
+> **Comando:** `sudo dpkg-reconfigure slapd`
+
+**Captura 01:**
+![Comando ejecutar asistente](04-configuracion-del-servidor/01-comando-ejecutar-asistente.png)
+
+### Paso 4.2: Omisión de la Configuración Inicial
+Se selecciona la opción "No" para permitir que el asistente nos guíe en la creación de una nueva base de datos personalizada.
+
+**Captura 02:**
+![Omitir configuración](04-configuracion-del-servidor/02-omitir-configuracion.png)
+
+### Paso 4.3: Definición del Nombre de Dominio
+Se introduce el nombre DNS que servirá para construir el Base DN del directorio (ej. `empresa.local`).
+
+**Captura 03:**
+![Nombre de dominio](04-configuracion-del-servidor/03-nombre-dominio.png)
+
+### Paso 4.4: Nombre de la Organización
+Se especifica el nombre de la entidad que será utilizado en el DN base.
+
+**Captura 04:**
+![Nombre organización](04-configuracion-del-servidor/04-nombre-organizacion.png)
+
+### Paso 4.5: Contraseña del Administrador
+Se define y confirma la contraseña para la cuenta `admin` del nuevo directorio configurado.
+
+**Capturas 05 y 06:**
+![Password admin](04-configuracion-del-servidor/05-password-admin.png)
+![Confirmación password](04-configuracion-del-servidor/06-confirmacion-password.png)
+
+### Paso 4.6: Opciones de Base de Datos y Purga
+Se configura el motor de base de datos y se decide si se desea eliminar la base de datos anterior (purgado) al desinstalar el paquete.
+
+**Captura 07:**
+![Opción purgado](04-configuracion-del-servidor/08-opcion-purgado.png)
+
+### Paso 4.7: Gestión de Base de Datos Antigua
+Se confirma el movimiento de los archivos de la base de datos antigua para evitar conflictos con la nueva configuración.
+
+**Captura 08:**
+![Mover base de datos](04-configuracion-del-servidor/09-mover-base-data.png)
+
+### Paso 4.8: Resumen y Finalización
+El asistente aplica los cambios y muestra el resumen final de la configuración del servidor LDAP.
+
+**Captura 09:**
+![Resumen final](04-configuracion-del-servidor/
