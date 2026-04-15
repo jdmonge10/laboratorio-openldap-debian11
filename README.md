@@ -124,3 +124,28 @@ Ejecutamos una consulta a la raíz del servidor para confirmar que identifica co
 
 **Captura 01:**
 ![Prueba de funcionamiento](05-prueba-de-funcionamiento/01-verificacion-final.png)
+
+
+---
+
+## 🧠 Solución de Problemas (Troubleshooting)
+En el despliegue de OpenLDAP es común encontrar errores de permisos o de conexión. Aquí tienes las soluciones a los fallos más frecuentes detectados en este laboratorio:
+
+| Error Común | Causa Probable | Solución Sugerida |
+| :--- | :--- | :--- |
+| **`Can't contact LDAP server`** | El servicio `slapd` no está iniciado o el puerto 389 está bloqueado. | Ejecuta `sudo systemctl start slapd` y revisa el firewall. |
+| **`Invalid credentials`** | La contraseña de `admin` no coincide con la configurada en la Fase 04. | Reconfigura con `sudo dpkg-reconfigure slapd`. |
+| **`Insufficient access`** | Se intenta modificar el directorio sin usar `sudo` o el DN de administrador. | Asegúrate de ejecutar los comandos con privilegios elevados. |
+| **`NamingContexts vacío`** | Error en la definición del dominio durante la reconfiguración. | Verifica que el "Base DN" coincida con tu dominio en `/etc/ldap/ldap.conf`. |
+
+### 🔍 Depuración en tiempo real
+Si el servicio no arranca, puedes ver qué está pasando exactamente con este comando:
+> `sudo tail -f /var/log/syslog | grep slapd`
+
+
+---
+
+## 🚀 Hoja de Ruta (Próximos Pasos)
+- [ ] **Fase 06:** Automatización de la estructura base mediante archivos **LDIF**.
+- [ ] **Fase 07:** Implementación de seguridad mediante TLS (LDAPS).
+- [ ] **Fase 08:** Integración de un panel de gestión web (LAM).
