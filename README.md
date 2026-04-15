@@ -148,6 +148,31 @@ Se utiliza la herramienta `ldapadd` para inyectar la configuración. Es necesari
 
 ---
 
+---
+
+## 📂 Fase 07: Gestión de Usuarios (LDIF)
+Una vez establecida la estructura jerárquica del dominio `laboratorio.local`, procedemos a la creación de usuarios mediante archivos de intercambio de datos (LDIF). Este método permite definir de forma precisa atributos de red y de sistema.
+
+### Paso 7.1: Preparación del entorno
+Iniciamos la creación del archivo de configuración utilizando el editor `nano`. Este fichero contendrá todos los parámetros del nuevo objeto de usuario.
+> **Comando:** `nano 02-crear-usuario.ldif`
+
+**Captura 01:**
+![Preparación del fichero](07-gestion-usuarios/01-preparacion-fichero-usuario.png)
+
+### Paso 7.2: Definición de atributos del usuario
+Configuramos el usuario "alumno" asignándole las clases de objeto `inetOrgPerson`, `posixAccount` y `shadowAccount`. Definimos parámetros críticos como el `uidNumber`, `gidNumber`, la contraseña y el directorio `home`.
+
+**Captura 02:**
+![Contenido del archivo LDIF](07-gestion-usuarios/02-contenido-usuario-ldif.png)
+
+### Paso 7.3: Importación y Alta en el Sistema
+Finalizamos el proceso inyectando el archivo LDIF en la base de datos de OpenLDAP. Tras introducir la contraseña de administrador, el servidor confirma la creación exitosa del registro.
+> **Comando:** `ldapadd -x -D "cn=admin,dc=laboratorio,dc=local" -W -f 02-crear-usuario.ldif`
+
+**Captura 04:**
+![Éxito en el alta del usuario](07-gestion-usuarios/04-exito-alta-usuario.png)
+
 ## 🧠 Solución de Problemas (Troubleshooting)
 En el despliegue de OpenLDAP es común encontrar errores de permisos o de conexión. Aquí tienes las soluciones a los fallos más frecuentes detectados en este laboratorio:
 
@@ -166,5 +191,5 @@ Si el servicio no arranca, puedes ver qué está pasando exactamente con este co
 ---
 
 ## 🚀 Hoja de Ruta (Próximos Pasos)
-- [ ] **Fase 07:** Implementación de seguridad mediante TLS (LDAPS).
-- [ ] **Fase 08:** Integración de un panel de gestión web (LAM).
+- [ ] **Fase 08:** Implementación de seguridad mediante TLS (LDAPS).
+- [ ] **Fase 09:** Integración de un panel de gestión web (LAM).
