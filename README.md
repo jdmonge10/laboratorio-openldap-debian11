@@ -104,10 +104,10 @@ Se configura el motor de base de datos y se decide si se desea eliminar la base 
 Se confirma el movimiento de los archivos de la base de datos antigua para evitar conflictos con la nueva configuración.
 
 **Captura 08:**
-![Mover base de datos](04-configuracion-del-servidor/09-mover-base-data.png)
+![Mover base de datos](04-configuracion-del-servidor/09-mover-base-datos.png)
 
 ### Paso 4.8: Resumen y Finalización
 El asistente aplica los cambios y muestra el resumen final de la configuración del servidor LDAP.
 
 **Captura 09:**
-![Resumen final](04-configuracion-del-servidor/
+![Resumen final](04-configuracion-del-servidor/-resumen-final-asistente.png).
