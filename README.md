@@ -12,4 +12,4 @@ Iniciamos sincronizando los índices de paquetes para asegurar que descargamos l
 > **Comando:** `sudo apt update`
 
 **Captura 01:**
-![Actualización de repositorios](01-actualizacion-y-preparacion/01-update.png)
+![Actualización de repositorios](01-actualizacion-y-preparacion/01-apt-update.png)
