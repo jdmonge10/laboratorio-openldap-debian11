@@ -1,1 +1,9 @@
+# Unidad Organizativa para Usuarios
+dn: ou=usuarios,dc=laboratorio,dc=local
+objectClass: organizationalUnit
+ou: usuarios
 
+# Unidad Organizativa para Grupos
+dn: ou=grupos,dc=laboratorio,dc=local
+objectClass: organizationalUnit
+ou: grupos
