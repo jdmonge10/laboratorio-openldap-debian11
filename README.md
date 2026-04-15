@@ -128,6 +128,20 @@ Ejecutamos una consulta a la raíz del servidor para confirmar que identifica co
 
 ---
 
+## 📂 Fase 06: Estructura de Directorio (LDIF)
+Configuramos la jerarquía interna de la organización **laboratorio** mediante archivos LDIF para automatizar la creación de contenedores.
+
+### Paso 6.1: Creación de OUs (Usuarios y Grupos)
+Ejecutamos la carga de la estructura base para separar los objetos del directorio de forma lógica.
+> **Comando:** `ldapadd -x -D "cn=admin,dc=laboratorio,dc=local" -W -f ldif/01-estructura-base.ldif`
+
+**Captura 01:**
+![Carga LDIF Laboratorio](06-estructura-ldif/01-carga-ldif.png)
+
+
+---
+
+
 ## 🧠 Solución de Problemas (Troubleshooting)
 En el despliegue de OpenLDAP es común encontrar errores de permisos o de conexión. Aquí tienes las soluciones a los fallos más frecuentes detectados en este laboratorio:
 
@@ -146,6 +160,5 @@ Si el servicio no arranca, puedes ver qué está pasando exactamente con este co
 ---
 
 ## 🚀 Hoja de Ruta (Próximos Pasos)
-- [ ] **Fase 06:** Automatización de la estructura base mediante archivos **LDIF**.
 - [ ] **Fase 07:** Implementación de seguridad mediante TLS (LDAPS).
 - [ ] **Fase 08:** Integración de un panel de gestión web (LAM).
