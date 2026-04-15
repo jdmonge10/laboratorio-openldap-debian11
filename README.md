@@ -46,3 +46,15 @@ El instalador despliega la base de datos inicial y activa el demonio `slapd` en 
 ![Finalización Instalación](02-instalacion-openldap/04-finalizacion-instalacion.png)
 
 ---
+
+## 📂 Fase 03: Verificación del Servicio
+Una vez finalizada la instalación, es imprescindible validar que el demonio `slapd` se encuentra en ejecución y operando sin errores en el sistema.
+
+### Paso 3.1: Comprobación del estado del servicio
+Utilizamos el sistema de control de servicios para verificar que OpenLDAP está "active (running)". Este paso confirma que el servidor está listo para recibir peticiones en el puerto 389.
+> **Comando:** `sudo systemctl status slapd`
+
+**Captura 01:**
+![Estado activo del servicio](03-verificacion-del-servicio/01-status-activo.png)
+
+---
