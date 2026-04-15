@@ -129,18 +129,24 @@ Ejecutamos una consulta a la raíz del servidor para confirmar que identifica co
 ---
 
 ## 📂 Fase 06: Estructura de Directorio (LDIF)
-Configuramos la jerarquía interna de la organización **laboratorio** mediante archivos LDIF para automatizar la creación de contenedores.
+En esta etapa, transformamos el servidor base en una estructura organizada mediante archivos de intercambio de datos (LDIF), creando las Unidades Organizativas (OU).
 
-### Paso 6.1: Creación de OUs (Usuarios y Grupos)
-Ejecutamos la carga de la estructura base para separar los objetos del directorio de forma lógica.
-> **Comando:** `ldapadd -x -D "cn=admin,dc=laboratorio,dc=local" -W -f ldif/01-estructura-base.ldif`
+### Paso 6.1: Creación del archivo de definición
+Diseñamos el fichero con los contenedores principales: `usuarios` y `grupos` bajo el dominio `dc=laboratorio,dc=local`.
 
-**Captura 01:**
-![Carga LDIF Laboratorio](06-estructura-ldif/01-carga-ldif.png)
+**Captura 01 (Editor nano):**
+![Contenido del archivo LDIF](06-estructura-ldif/02-contenido-archivo-ldif.png)
 
+### Paso 6.2: Ejecución e Importación
+Se utiliza la herramienta `ldapadd` para inyectar la configuración. Es necesario validar la ruta del archivo para evitar errores de "No such file or directory".
+
+**Captura 02 (Comando de carga):**
+![Comando ldapadd](06-estructura-ldif/03-comando-carga-ldif.png)
+
+**Captura 03 (Éxito de la operación):**
+![Éxito de importación](06-estructura-ldif/04-exito-importacion-ou.png)
 
 ---
-
 
 ## 🧠 Solución de Problemas (Troubleshooting)
 En el despliegue de OpenLDAP es común encontrar errores de permisos o de conexión. Aquí tienes las soluciones a los fallos más frecuentes detectados en este laboratorio:
