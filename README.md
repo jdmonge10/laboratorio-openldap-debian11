@@ -170,8 +170,8 @@ Configuramos el usuario "alumno" asignándole las clases de objeto `inetOrgPerso
 Finalizamos el proceso inyectando el archivo LDIF en la base de datos de OpenLDAP. Tras introducir la contraseña de administrador, el servidor confirma la creación exitosa del registro.
 > **Comando:** `ldapadd -x -D "cn=admin,dc=laboratorio,dc=local" -W -f 02-crear-usuario.ldif`
 
-**Captura 04:**
-![Éxito en el alta del usuario](07-gestion-usuarios/04-exito-alta-usuario.png)
+**Captura 03:**
+![Éxito en el alta del usuario](07-gestion-usuarios/03-exito-alta-usuario.png)
 
 ## 🧠 Solución de Problemas (Troubleshooting)
 En el despliegue de OpenLDAP es común encontrar errores de permisos o de conexión. Aquí tienes las soluciones a los fallos más frecuentes detectados en este laboratorio:
