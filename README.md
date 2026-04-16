@@ -39,7 +39,7 @@ Iniciamos sincronizando los índices de paquetes para asegurar que descargamos l
 **Captura 01:**
 ![Actualización de repositorios](01-actualizacion-y-preparacion/01-apt-update.png)
 
-
+💡 Tip de automatización: Puedes ejecutar esta fase automáticamente con el script ./scripts/01-preparacion.sh.
 ---
 
 ## 📂 Fase 02: Instalación de OpenLDAP
