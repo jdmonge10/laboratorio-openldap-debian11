@@ -39,7 +39,7 @@ Iniciamos sincronizando los índices de paquetes para asegurar que descargamos l
 **Captura 01:**
 ![Actualización de repositorios](01-actualizacion-y-preparacion/01-apt-update.png)
 
-💡 Tip de automatización: Puedes ejecutar esta fase automáticamente con el script ./scripts/01-preparacion.sh.
+> 💡 Tip de automatización: Puedes ejecutar esta fase automáticamente con el script ./scripts/01-preparacion.sh.
 ---
 
 ## 📂 Fase 02: Instalación de OpenLDAP
@@ -70,7 +70,7 @@ El instalador despliega la base de datos inicial y activa el demonio `slapd` en 
 **Captura 04:**
 ![Finalización Instalación](02-instalacion-openldap/04-finalizacion-instalacion.png)
 
-💡 Tip de automatización: La instalación y configuración de paquetes está automatizada en el script ./scripts/02-instalacion.sh.
+> 💡 Tip de automatización: La instalación y configuración de paquetes está automatizada en el script ./scripts/02-instalacion.sh.
 
 ---
 
@@ -175,7 +175,7 @@ Se utiliza la herramienta `ldapadd` para inyectar la configuración. Es necesari
 **Captura 03 (Éxito de la operación):**
 ![Éxito de importación](06-estructura-ldif/04-exito-importacion-ou.png)
 
-💡 Tip de automatización: Para cargar esta estructura sin errores manuales, puedes usar el script ./scripts/04-cargar-ldif.sh, el cual procesa automáticamente los ficheros de la carpeta /ldif.
+> 💡 Tip de automatización: Para cargar esta estructura sin errores manuales, puedes usar el script ./scripts/04-cargar-ldif.sh, el cual procesa automáticamente los ficheros de la carpeta /ldif.
 ---
 
 ## 📂 Fase 07: Gestión de Usuarios (LDIF)
@@ -201,7 +201,7 @@ Finalizamos el proceso inyectando el archivo LDIF en la base de datos de OpenLDA
 **Captura 03:**
 ![Éxito en el alta del usuario](07-gestion-usuarios/03-exito-alta-usuario.png)
 
-💡 Tip de automatización: Para cargar esta estructura sin errores manuales, puedes usar el script ./scripts/04-cargar-ldif.sh, el cual procesa automáticamente los ficheros de la carpeta /ldif.
+> 💡 Tip de automatización: Para cargar esta estructura sin errores manuales, puedes usar el script ./scripts/04-cargar-ldif.sh, el cual procesa automáticamente los ficheros de la carpeta /ldif.
 
 ---
 
