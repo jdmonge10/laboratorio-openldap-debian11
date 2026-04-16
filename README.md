@@ -8,11 +8,13 @@ Este manual documenta el proceso técnico integral para crear un entorno de serv
 * [🛠️ Especificaciones Técnicas](#️-especificaciones-técnicas)
 * [📂 Fase 01: Actualización y Preparación del Entorno](#-fase-01-actualización-y-preparación-del-entorno)
 * [📂 Fase 02: Instalación de OpenLDAP](#-fase-02-instalación-de-openldap)
-* [📂 Fase 03: Reconfiguración de slapd (Dominio)](#-fase-03-reconfiguración-de-slapd-dominio)
-* [📂 Fase 04: Configuración de la Base DN y Estructura](#-fase-04-configuración-de-la-base-dn-y-estructura)
-* [📂 Fase 05: Creación de Unidades Organizativas (OU)](#-fase-05-creación-de-unidades-organizativas-ou)
-* [📂 Fase 06: Gestión de Usuarios (LDIF)](#-fase-06-gestión-de-usuarios-ldif)
+* [📂 Fase 03: Verificación del Servicio](#-fase-03-verificación-del-servicio)
+* [📂 Fase 04: Configuración del Servidor](#-fase-04-configuración-del-servidor)
+* [📂 Fase 05: Prueba de Funcionamiento](#-fase-05-prueba-de-funcionamiento)
+* [📂 Fase 06: Estructura de Directorio (LDIF)](#-fase-06-estructura-de-directorio-ldif)
+* [📂 Fase 07: Gestión de Usuarios (LDIF)](#-fase-07-gestión-de-usuarios-ldif)
 * [🧠 Solución de Problemas (Troubleshooting)](#-solución-de-problemas-troubleshooting)
+* [🚀 Hoja de Ruta (Próximos Pasos)](#-hoja-de-ruta-próximos-pasos)
 
 ---
 
