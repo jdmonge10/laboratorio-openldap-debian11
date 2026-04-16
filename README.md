@@ -13,6 +13,7 @@ Este manual documenta el proceso técnico integral para crear un entorno de serv
 * [📂 Fase 05: Prueba de Funcionamiento](#-fase-05-prueba-de-funcionamiento)
 * [📂 Fase 06: Estructura de Directorio (LDIF)](#-fase-06-estructura-de-directorio-ldif)
 * [📂 Fase 07: Gestión de Usuarios (LDIF)](#-fase-07-gestión-de-usuarios-ldif)
+* [🤖 Automatización: Despliegue mediante Scripts](#-automatización-despliegue-mediante-scripts)
 * [🧠 Solución de Problemas (Troubleshooting)](#-solución-de-problemas-troubleshooting)
 * [🚀 Hoja de Ruta (Próximos Pasos)](#-hoja-de-ruta-próximos-pasos)
 
