@@ -70,6 +70,8 @@ El instalador despliega la base de datos inicial y activa el demonio `slapd` en 
 **Captura 04:**
 ![Finalización Instalación](02-instalacion-openldap/04-finalizacion-instalacion.png)
 
+💡 Tip de automatización: La instalación y configuración de paquetes está automatizada en el script ./scripts/02-instalacion.sh.
+
 ---
 
 ## 📂 Fase 03: Verificación del Servicio
@@ -81,6 +83,8 @@ Utilizamos el sistema de control de servicios para verificar que OpenLDAP está 
 
 **Captura 01:**
 ![Estado activo del servicio](03-verificacion-del-servicio/01-status-activo.png)
+
+💡 Tip de automatización: El script ./scripts/03-verificacion.sh realiza estas comprobaciones de estado de forma automática.
 
 ---
 
@@ -171,8 +175,7 @@ Se utiliza la herramienta `ldapadd` para inyectar la configuración. Es necesari
 **Captura 03 (Éxito de la operación):**
 ![Éxito de importación](06-estructura-ldif/04-exito-importacion-ou.png)
 
----
-
+💡 Tip de automatización: Para cargar esta estructura sin errores manuales, puedes usar el script ./scripts/04-cargar-ldif.sh, el cual procesa automáticamente los ficheros de la carpeta /ldif.
 ---
 
 ## 📂 Fase 07: Gestión de Usuarios (LDIF)
@@ -197,6 +200,10 @@ Finalizamos el proceso inyectando el archivo LDIF en la base de datos de OpenLDA
 
 **Captura 03:**
 ![Éxito en el alta del usuario](07-gestion-usuarios/03-exito-alta-usuario.png)
+
+💡 Tip de automatización: Para cargar esta estructura sin errores manuales, puedes usar el script ./scripts/04-cargar-ldif.sh, el cual procesa automáticamente los ficheros de la carpeta /ldif.
+
+---
 
 ## 🧠 Solución de Problemas (Troubleshooting)
 En el despliegue de OpenLDAP es común encontrar errores de permisos o de conexión. Aquí tienes las soluciones a los fallos más frecuentes detectados en este laboratorio:
