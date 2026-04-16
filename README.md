@@ -205,6 +205,21 @@ Finalizamos el proceso inyectando el archivo LDIF en la base de datos de OpenLDA
 
 ---
 
+## 🤖 Automatización: Despliegue mediante Scripts
+Para optimizar el tiempo de despliegue y asegurar la consistencia del laboratorio, se han desarrollado scripts que gestionan el ciclo de vida del servidor.
+
+### 📜 Estructura de archivos
+* **`/scripts`**: Contiene la lógica de ejecución (Preparación, Instalación, Verificación y Carga).
+* **`/ldif`**: Contiene los datos de la estructura (`01-estructura-base.ldif`).
+
+### 🚀 Modo de uso
+Para ejecutar la automatización completa, otorga permisos y lanza los scripts en orden:
+1. `chmod +x scripts/*.sh`
+2. `./scripts/01-preparacion.sh`
+3. `./scripts/02-instalacion.sh`
+4. `./scripts/03-verificacion.sh`
+5. `./scripts/04-cargar-ldif.sh`
+
 ## 🧠 Solución de Problemas (Troubleshooting)
 En el despliegue de OpenLDAP es común encontrar errores de permisos o de conexión. Aquí tienes las soluciones a los fallos más frecuentes detectados en este laboratorio:
 
@@ -218,7 +233,6 @@ En el despliegue de OpenLDAP es común encontrar errores de permisos o de conexi
 ### 🔍 Depuración en tiempo real
 Si el servicio no arranca, puedes ver qué está pasando exactamente con este comando:
 > `sudo tail -f /var/log/syslog | grep slapd`
-
 
 ---
 
