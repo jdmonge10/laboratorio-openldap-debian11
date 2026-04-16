@@ -4,6 +4,28 @@ Este manual documenta el proceso técnico integral para crear un entorno de serv
 
 ---
 
+## 📑 Índice de Contenidos
+* [🛠️ Especificaciones Técnicas](#️-especificaciones-técnicas)
+* [📂 Fase 01: Actualización y Preparación del Entorno](#-fase-01-actualización-y-preparación-del-entorno)
+* [📂 Fase 02: Instalación de OpenLDAP](#-fase-02-instalación-de-openldap)
+* [📂 Fase 03: Reconfiguración de slapd (Dominio)](#-fase-03-reconfiguración-de-slapd-dominio)
+* [📂 Fase 04: Configuración de la Base DN y Estructura](#-fase-04-configuración-de-la-base-dn-y-estructura)
+* [📂 Fase 05: Creación de Unidades Organizativas (OU)](#-fase-05-creación-de-unidades-organizativas-ou)
+* [📂 Fase 06: Gestión de Usuarios (LDIF)](#-fase-06-gestión-de-usuarios-ldif)
+* [🧠 Solución de Problemas (Troubleshooting)](#-solución-de-problemas-troubleshooting)
+
+---
+
+## 🛠️ Especificaciones Técnicas
+Para asegurar la replicabilidad de este laboratorio de directorio activo, se detallan los recursos utilizados:
+* **Sistema Operativo:** Debian 11 (Bullseye)
+* **Servicio de Directorio:** OpenLDAP (`slapd`)
+* **Herramientas de Cliente:** `ldap-utils`
+* **Entorno:** VirtualBox / Servidor Dedicado
+* **Dominio del Laboratorio:** `laboratorio.local`
+
+---
+
 ## 📂 Fase 01: Actualización y Preparación del Entorno
 El éxito de la instalación de OpenLDAP depende de un sistema base sólido y actualizado. En esta fase preparamos Debian 11 para los servicios de identidad.
 
